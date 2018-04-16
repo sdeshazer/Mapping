@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.16
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CamCalibration", "CamCalibration\CamCalibration.vcxproj", "{1DA0B428-A03D-4637-AA87-9DD886FBA37A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1DA0B428-A03D-4637-AA87-9DD886FBA37A}.Debug|x64.ActiveCfg = Debug|x64
+		{1DA0B428-A03D-4637-AA87-9DD886FBA37A}.Debug|x64.Build.0 = Debug|x64
+		{1DA0B428-A03D-4637-AA87-9DD886FBA37A}.Debug|x86.ActiveCfg = Debug|Win32
+		{1DA0B428-A03D-4637-AA87-9DD886FBA37A}.Debug|x86.Build.0 = Debug|Win32
+		{1DA0B428-A03D-4637-AA87-9DD886FBA37A}.Release|x64.ActiveCfg = Release|x64
+		{1DA0B428-A03D-4637-AA87-9DD886FBA37A}.Release|x64.Build.0 = Release|x64
+		{1DA0B428-A03D-4637-AA87-9DD886FBA37A}.Release|x86.ActiveCfg = Release|Win32
+		{1DA0B428-A03D-4637-AA87-9DD886FBA37A}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D39B5D7C-1AB2-4533-B8AA-F5B0520CBC82}
+	EndGlobalSection
+EndGlobal
