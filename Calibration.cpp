@@ -24,7 +24,7 @@ using namespace cv;
 // ================
 //       onMouse
 // ================
-string ComputerUserName = "Maste";
+
 vector<int> xValues;
 vector<int> yValues;
 
@@ -82,8 +82,8 @@ void mouseEvent(int event, int x, int y, int flags, void* param) {
 int main() {
 	//int x, y;
 	string nameOfParkingLot = ParkingLotName();
-	const char* ParkinglotToMapFile = string("/home/pi/projects/VisualPark/images/latest.png").c_str();
-	IplImage *img = cvLoadImage(ParkinglotToMapFile, 1); //load in parkinglot you wish to map
+	//const char* ParkinglotToMapFile = string("/home/pi/projects/VisualPark/images/latest.png").c_str();
+	IplImage *img = cvLoadImage("/home/pi/projects/VisualPark/images/latest.png", 1); //load in parkinglot you wish to map
 
 	Mat howtoVector = imread("/home/pi/projects/MapLot/images/howtomap.png", 1);
 
@@ -101,6 +101,9 @@ int main() {
 	int currentSpot = 1;
 	a_file.open("/home/pi/projects/VisualPark/DataSets/" + nameOfParkingLot + ".txt");
 
+do{
+  
+}
 	for (int i = 0; i < xValues.size(); i++) {
 		if (i == 0) {
 			a_file << currentSpot << " ";
@@ -111,7 +114,7 @@ int main() {
 			a_file << currentSpot << " ";
 			currentSpot++;
 		}
-		a_file << xValues[i] << " " << yValues[i] << " ";
+		a_file << xValues[i] << " " << yValues[i] << endl;
 	}
 
 	cout << "Text file complete." << endl;
