@@ -1,4 +1,4 @@
-#include "stdafx.h"
+//#include "stdafx.h"
 #include <iostream>
 #include <vector>
 #include <string>
@@ -41,14 +41,23 @@ string ParkingLotName() {
 	xValues.clear();
 	yValues.clear();
 	string i;
-	cout << "Examples: " << endl;
-	cout << "This business has multiple parking lots so they labeled them as so: " << endl;
-	cout << "<Insert Business Name Here> Parking Lot 1" << endl;
-	cout << "<Insert Business Name Here> Parking Lot 2" << endl;
-	cout << "This business only had one parking lot so they labeled it as so: " << endl;
-	cout << "<Insert Business Name Here> Parking Lot" << endl;
-	cout << "Please type the Id of the lot: " << endl;
-	cout << "ParkingLotID: ";
+ cout << "*********************************" << endl;
+ cout << "     Mapping New Parkinglot      " << endl; 
+ cout << "*********************************" << endl;
+cout << "[ Please note ]" << endl;
+cout <<"You must have a monitor plugged into this raspberr pi" << endl;
+cout <<"in order to use this program." << endl;
+cout << "You must also have Vision Parking installed on this raspberry pi" << endl;
+cout << "and have executed it at least once to obtain an image titled: latest.png " << endl;
+cout << "This image is found in /home/pi/projects/VisualPark/images/latest.png" << endl;
+cout << endl;
+cout << endl; 
+cout << "You may press Q to quit at any time. This will write the dataset." << endl;
+cout << endl; 
+cout <<"******************************************************************"<< endl;
+cout << endl;  
+	cout << "Please type the name of the lot: " << endl;
+	cout << "Parkinglot Name: ";
 	cin >> i;
 	cout << endl;
 	return i;
@@ -73,10 +82,10 @@ void mouseEvent(int event, int x, int y, int flags, void* param) {
 int main() {
 	//int x, y;
 	string nameOfParkingLot = ParkingLotName();
-	const char* ParkinglotToMapFile = string("C:\\Users\\" + ComputerUserName + "\\Pictures\\apptest\\hsbmapping.png").c_str();
+	const char* ParkinglotToMapFile = string("/home/pi/projects/VisualPark/images/latest.png").c_str();
 	IplImage *img = cvLoadImage(ParkinglotToMapFile, 1); //load in parkinglot you wish to map
 
-	Mat howtoVector = imread("C:\\Users\\" + ComputerUserName + "\\Music\\howtomap.png", 0);
+	Mat howtoVector = imread("/home/pi/projects/MapLot/images/howtomap.png", 1);
 
 	cvNamedWindow("My Window", 1);
 	cvNamedWindow("How To Map Vector Coordinates", 1);
@@ -90,19 +99,19 @@ int main() {
 	cout << "Writing text file..." << endl;
 	ofstream a_file;
 	int currentSpot = 1;
-	a_file.open("C:\\Users\\" + ComputerUserName + "\\Music\\" + nameOfParkingLot + ".txt");
+	a_file.open("/home/pi/projects/VisualPark/DataSets/" + nameOfParkingLot + ".txt");
 
 	for (int i = 0; i < xValues.size(); i++) {
 		if (i == 0) {
-			a_file << "Parking Spot" << currentSpot << endl;
+			a_file << currentSpot << " ";
 			currentSpot++;
 		}
 
 		if (i % 4 == 0 && i != 0) {
-			a_file << "Parking Spot" << currentSpot << endl;
+			a_file << currentSpot << " ";
 			currentSpot++;
 		}
-		a_file << xValues[i] << " " << yValues[i] << endl;
+		a_file << xValues[i] << " " << yValues[i] << " ";
 	}
 
 	cout << "Text file complete." << endl;
