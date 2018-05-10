@@ -104,9 +104,6 @@ int main() {
 	int currentSpot = 1;
 	a_file.open("/home/pi/projects/VisualPark/DataSets/" + nameOfParkingLot + ".txt");
 
-do{
-
-}
 	for (int i = 0; i < xValues.size(); i++) {
 		if (i == 0) {
 			a_file << currentSpot << " ";
