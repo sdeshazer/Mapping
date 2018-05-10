@@ -55,7 +55,7 @@ cout << "and have executed it at least once to obtain an image titled: latest.pn
 cout << "This image is found in /home/pi/projects/VisualPark/images/latest.png" << endl;
 cout << endl;
 cout << endl;
-cout << "You may press Q to quit at any time. This will write the dataset." << endl;
+cout << "You may press [Enter] to quit at any time. This will write the dataset." << endl;
 cout << endl;
 cout <<"******************************************************************"<< endl;
 cout << endl;
