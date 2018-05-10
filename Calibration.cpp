@@ -1,3 +1,6 @@
+//****************************
+//  FOR RASPBERRYPI 3 raspbian
+//****************************
 //#include "stdafx.h"
 #include <iostream>
 #include <vector>
@@ -42,7 +45,7 @@ string ParkingLotName() {
 	yValues.clear();
 	string i;
  cout << "*********************************" << endl;
- cout << "     Mapping New Parkinglot      " << endl; 
+ cout << "     Mapping New Parkinglot      " << endl;
  cout << "*********************************" << endl;
 cout << "[ Please note ]" << endl;
 cout <<"You must have a monitor plugged into this raspberr pi" << endl;
@@ -51,11 +54,11 @@ cout << "You must also have Vision Parking installed on this raspberry pi" << en
 cout << "and have executed it at least once to obtain an image titled: latest.png " << endl;
 cout << "This image is found in /home/pi/projects/VisualPark/images/latest.png" << endl;
 cout << endl;
-cout << endl; 
+cout << endl;
 cout << "You may press Q to quit at any time. This will write the dataset." << endl;
-cout << endl; 
+cout << endl;
 cout <<"******************************************************************"<< endl;
-cout << endl;  
+cout << endl;
 	cout << "Please type the name of the lot: " << endl;
 	cout << "Parkinglot Name: ";
 	cin >> i;
@@ -102,7 +105,7 @@ int main() {
 	a_file.open("/home/pi/projects/VisualPark/DataSets/" + nameOfParkingLot + ".txt");
 
 do{
-  
+
 }
 	for (int i = 0; i < xValues.size(); i++) {
 		if (i == 0) {
